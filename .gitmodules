@@ -1,0 +1,3 @@
+[submodule "wasm-www"]
+	path = wasm-www
+	url = https://github.com/slaterb1/wasm-www
