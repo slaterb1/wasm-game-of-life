@@ -51,6 +51,18 @@ impl Universe {
         (row * self.width + col) as usize
     }
 
+    pub fn width(&self) -> u32 {
+        self.width
+    }
+
+    pub fn height(&self) -> u32 {
+        self.height
+    }
+
+    pub fn cells(&self) -> *const Cell {
+        self.cells.as_ptr()
+    }
+
     fn live_neigh_count(&self, row: u32, col: u32) -> u8 {
         let mut count = 0;
         for delta_row in [self.height - 1, 0, 1].iter() {
